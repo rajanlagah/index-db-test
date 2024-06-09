@@ -18,7 +18,8 @@ function App() {
     const writeStart = new Date();
 
     for (let i = 0; i < numberOfIterations; i++) {
-      const testData = { name: "Test", value: Math.random() };
+      const testData = { name: "Test", value: Math.random(), data: { year: 2022, month: 9, day: 1, status:{ success: true, msg:"hi"}} };
+
       const prevData = JSON.parse(localStorage.getItem("testData")) || [];
       const updatedData = JSON.stringify([...prevData, { id: i, ...testData }]);
       localStorage.setItem("testData", updatedData);

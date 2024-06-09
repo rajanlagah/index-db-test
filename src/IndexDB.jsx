@@ -75,7 +75,7 @@ function IndexDB() {
                     existingData = [];
                 }
 
-                const updatedData = { name: "Test", value: Math.random() };
+                const updatedData = { name: "Test", value: Math.random(), data: { year: 2022, month: 9, day: 1, status:{ success: true, msg:"hi"}} };
                 await writeToIndexedDB(db, i, updatedData);
             }
 
